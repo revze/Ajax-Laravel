@@ -1,12 +1,7 @@
 @extends('pegawai.app')
 
 @section('content')
-<style type="text/css">
-  .none{
-    display: none;
-  }
-</style>
-<script type="text/javascript">
+ <script type="text/javascript">
   $(function(){
     $('#form_create').submit(function(e){
       e.preventDefault();
@@ -16,7 +11,7 @@
         url: '{{ url('pegawai') }}',
         success:function(data){
 
-          if (data=='success') {
+          if (data.sukses==true) {
             $('#buttonplace').addClass('none');
             $('#loaderplace').removeClass('none');
             $('#form_create input').attr('readonly','true');

@@ -13,8 +13,16 @@
 Route::get('/',function(){
   return redirect('pegawai');
 });
-Route::resource('pegawai','PegawaiController');
-Route::get('tes','PegawaiController@store');
+
+Route::group(['prefix'=>'pegawai'],function(){
+
+  Route::get('','PegawaiController@index');
+  Route::post('','PegawaiController@store');
+  Route::get('{id}','PegawaiController@show');
+  Route::post('update','PegawaiController@update');
+  Route::post('destroy','PegawaiController@destroy');
+
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
