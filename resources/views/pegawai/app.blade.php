@@ -67,8 +67,7 @@
             document.open();
             document.write(data);
             document.close();
-            // alert(url);
-          }
+           }
         });
       });
 
