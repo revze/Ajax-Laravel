@@ -23,6 +23,8 @@ Route::group(['prefix'=>'pegawai'],function(){
   Route::post('destroy','PegawaiController@destroy');
 
 });
+Route::get('tes1','TesController@index');
+Route::get('tes2','TesController@index2');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
