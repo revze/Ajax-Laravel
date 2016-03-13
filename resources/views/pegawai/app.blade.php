@@ -43,16 +43,16 @@
     </style>
     <script type="text/javascript">
      $(function(){
-      // $(window).load(function(){
-      //   $('body').css('overflow','hidden');
-      //   setTimeout(function() {
-      //     $('body').addClass('loaded');
-      //     $('body').css('overflow','auto');
-      //   },200);
-      //   setTimeout(function() {
-      //     $('#loader-wrapper').addClass('none');
-      //   },800);
-      // });
+      $(window).load(function(){
+        $('body').css('overflow','hidden');
+        setTimeout(function() {
+          $('body').addClass('loaded');
+          $('body').css('overflow','auto');
+        },200);
+        setTimeout(function() {
+          $('#loader-wrapper').addClass('none');
+        },800);
+      });
 
       $('.spa').click(function(e){
         e.preventDefault();
@@ -76,7 +76,7 @@
     </script>
   </head>
   <body>
-    <!-- <div id="loader-wrapper">
+    <div id="loader-wrapper">
         <div class="loader-section center">
           <div class="preloader-wrapper big active" style="margin-top:250px">
             <div class="spinner-layer spinner-blue">
@@ -120,7 +120,7 @@
             </div>
           </div>
         </div>
-    </div> -->
+    </div>
     @include('pegawai.menu')
     <div class="container">
       <div class="row">
