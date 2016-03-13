@@ -8,6 +8,10 @@
     <script src="{{ url('assets/js/jquery.min.js') }}"></script>
     <script src="{{ url('assets/js/materialize.min.js') }}"></script>
     <style type="text/css">
+      .spa{
+        cursor: pointer;
+      }
+
       .none{
         display: none;
       }
@@ -50,18 +54,20 @@
       //   },800);
       // });
 
-      $('.spa').click(function(){
-        $url = $(this).attr('href');
+      $('.spa').click(function(e){
+        e.preventDefault();
+        var url = $(this).attr('href');
         $.ajax({
-          url: $url,
+          url: url,
           type: 'GET',
           data: {},
           success:function(data)
           {
-            window.history.pushState('','',$url);
+            window.history.pushState('','',url);
             document.open();
             document.write(data);
             document.close();
+            // alert(url);
           }
         });
       });

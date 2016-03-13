@@ -14,7 +14,7 @@ class PegawaiController extends Controller
     public function index()
     {
       $no = 1;
-      $pegawai = DB::table('pegawai')->orderBy('id','desc')->paginate(2);
+      $pegawai = DB::table('pegawai')->orderBy('id','desc')->paginate(5);
       return view('pegawai.index',['no'=>$no,'pegawai'=>$pegawai]);
     }
 
