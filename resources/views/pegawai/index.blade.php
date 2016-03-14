@@ -367,7 +367,17 @@ $(function(){
       <a href="javascript:void(0)" class="modal-action modal-close waves-effect waves-green btn-flat">Batal</a>
     </div>
   </div>
-
+  <div class="row" style="margin-bottom:0">
+      <form class="col s12">
+        <div class="row" style="margin-bottom:0">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Cari pegawai</label>
+          </div>
+        </div>
+      </form>
+    </div>
 <table class="centered striped">
   <thead>
     <tr>
